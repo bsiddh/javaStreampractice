@@ -16,6 +16,10 @@ public class Test {
        long values = Arrays.stream(arr)
                 .boxed()
                 .count();
-        System.out.println(values);
+//        System.out.println(values);
+
+        arrayEleemnt.stream()
+                .sorted(Collections.reverseOrder())
+                .forEach(System.out::println);
     }
 }
