@@ -7,10 +7,15 @@ import java.util.stream.Collectors;
 public class Test {
 
     public static void main(String[] args) {
-        int[] arrElement = {10,15,8,49,25,98,32};
-        Map<Boolean,List<Integer>> valuesOfArray = Arrays.stream(arrElement)
+        List<Integer> arrayEleemnt = Arrays.asList(10,15,8,49,25,98,98,32,15);
+       long value = arrayEleemnt.stream()
+                .count();
+//       System.out.println(value);
+
+        int[] arr = {10,15,8,49,25,98,98,32,15};
+       long values = Arrays.stream(arr)
                 .boxed()
-                .collect(Collectors.partitioningBy(n->n%3==0));
-        System.out.println(valuesOfArray);
+                .count();
+        System.out.println(values);
     }
 }
